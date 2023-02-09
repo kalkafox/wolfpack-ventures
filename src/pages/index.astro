@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import '@fontsource/poppins/200.css'
+import '../components/checker.css'
+
+import Checker from '../components/Checker'
 ---
 
 <Layout title="Wolfpack Ventures">
@@ -40,6 +43,9 @@ import '@fontsource/poppins/200.css'
           <br />
           5. You should be done! Hopefully... DM me for the IP if you need it.
         </p>
+				<br /><br />
+				<p class="text-xl text-zinc-300 font-bold">Server Status</p>
+				<Checker client:idle />
       </div>
     </div>
   </main>
