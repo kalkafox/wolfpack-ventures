@@ -6,7 +6,7 @@ const check_url = () => {
   // CORS - Cross Origin Resource Sharing
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
   let is_ok = false
-  fetch('http://74.91.121.157:8000', {
+  fetch('https://74.91.121.157:8443', {
     mode: 'no-cors',
   }).then((response) => {
     is_ok = response.ok
