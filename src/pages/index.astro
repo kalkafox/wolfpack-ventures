@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import '@fontsource/poppins/200.css'
+import '../components/scrollbar.css'
 ---
 
 <Layout title="Wolfpack Ventures">
@@ -10,18 +11,58 @@ import '@fontsource/poppins/200.css'
         src="https://wallpapercave.com/wp/wp2233421.jpg"
         class="w-full h-full object-cover fixed"
       />
-      <div class="bg-zinc-900/80 backdrop-blur-lg h-full w-full fixed"></div>
+      <div class="bg-zinc-900/80 h-full w-full fixed object-cover"></div>
     </div>
-    <div class="fixed w-full h-full font-[Poppins]">
+    <div class="absolute w-full h-full font-[Poppins] scrollbar">
       <div class="flex flex-col h-screen items-center m-6">
         <h1 class="text-6xl text-zinc-300 font-bold">Wolfpack Ventures</h1>
         <p class="text-2xl text-zinc-300 font-bold">
           (Yet another) Terraria modpack.
         </p>
-
+        <p class="text-zinc-300 text-3xl">Server Status</p>
+        <iframe
+          class="rounded-lg"
+          src="https://wolfpack-tservercheck.vercel.app/"
+          width="24"
+          height="24"></iframe>
         <br /><br />
         <h1 class="text-2xl text-zinc-300 font-bold">
-          <b>Installation Instructions</b>
+          <b>Installation Instructions (Automatic)</b>
+        </h1>
+        <br />
+
+        <div
+          id="toast-default"
+          class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800/20 backdrop-blur-lg"
+          role="alert"
+        >
+          <div
+            class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8"
+          >
+            <svg
+              viewBox="0 0 1024 1024"
+              fill="currentColor"
+              height="2em"
+              width="2em"
+            >
+              <path
+                d="M955.7 856l-416-720c-6.2-10.7-16.9-16-27.7-16s-21.6 5.3-27.7 16l-416 720C56 877.4 71.4 904 96 904h832c24.6 0 40-26.6 27.7-48zM480 416c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v184c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V416zm32 352a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+              ></path>
+            </svg>
+            <span class="sr-only">Fire icon</span>
+          </div>
+          <div class="ml-3 text-sm font-normal">
+            The server will automatically download the mods when you first join.
+            <br />
+            However, this means that you will need to create a vanilla character
+            if you do not have one already, which can be tedious. Feel free to choose
+            whichever option.
+          </div>
+        </div>
+
+        <br />
+        <h1 class="text-2xl text-zinc-300 font-bold">
+          <b>Installation Instructions (Manual)</b>
         </h1>
         <p class="text-xl text-zinc-300 font-bold">
           1. Download the modpack from <a
@@ -41,12 +82,6 @@ import '@fontsource/poppins/200.css'
           5. You should be done! Hopefully... DM me for the IP if you need it.
         </p>
         <br /><br />
-        <p class="text-zinc-300 text-3xl">Server Status</p>
-        <iframe
-          class="rounded-lg"
-          src="https://wolfpack-tservercheck.vercel.app/"
-          width="24"
-          height="24"></iframe>
       </div>
     </div>
   </main>
