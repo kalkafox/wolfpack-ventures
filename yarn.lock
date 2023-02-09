@@ -5162,7 +5162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:*":
+"typescript@npm:*, typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -5172,7 +5172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@*#~builtin<compat/typescript>":
+"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
@@ -5620,9 +5620,7 @@ __metadata:
     react-dom: ^18.2.0
     serve: ^14.2.0
     tailwindcss: ^3.2.6
-  peerDependencies:
-    prettier-plugin-organize-imports: "*"
-    prettier-plugin-tailwindcss: "*"
+    typescript: ^4.9.5
   languageName: unknown
   linkType: soft
 

@@ -9,6 +9,5 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
   integrations: [react(), tailwind(), partytown()],
   site: 'https://kalkafox.github.io',
-  base: '/wolfpack-ventures',
   output: 'static',
 })
