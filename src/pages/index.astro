@@ -5,41 +5,47 @@ import '../components/scrollbar.css'
 ---
 
 <Layout title="Wolfpack Ventures">
-  <main class="bg-zinc-900 w-full h-full absolute">
+  <main class="absolute h-full w-full bg-zinc-300 dark:bg-zinc-900">
     <div>
       <img
         src="https://wallpapercave.com/wp/wp2233421.jpg"
-        class="w-full h-full object-cover fixed"
+        class="fixed h-full w-full object-cover"
       />
-      <div class="bg-zinc-900/90 h-full w-full fixed object-cover"></div>
+      <div
+        class="fixed h-full w-full bg-zinc-400/70 object-cover backdrop-blur-sm dark:bg-zinc-900/90"
+      >
+      </div>
     </div>
-    <div class="absolute w-full h-full font-[Poppins] scrollbar">
-      <div class="flex flex-col h-screen items-center">
-        <h1 class="text-6xl text-zinc-300 font-bold text-center">
+    <div class="scrollbar absolute h-full w-full font-[Poppins]">
+      <div class="flex h-screen flex-col items-center">
+        <h1
+          class="text-center text-6xl font-bold text-zinc-900 dark:text-zinc-300"
+        >
           Wolfpack Ventures
         </h1>
-        <p class="text-2xl text-zinc-300 font-bold">
+        <p class="text-2xl font-bold text-zinc-900 dark:text-zinc-300">
           (Yet another) Terraria modpack.
         </p>
-        <p class="text-zinc-300 text-3xl">Server Status</p>
+        <p class="text-3xl text-zinc-900 dark:text-zinc-300">Server Status</p>
         <iframe
-          class="rounded-lg"
+          onload="this.style.opacity=1"
+          class="rounded-lg opacity-0 transition-opacity"
           src="https://wolfpack-tservercheck.vercel.app/"
           width="24"
           height="24"></iframe>
         <br /><br />
-        <h1 class="text-xl text-zinc-300 font-bold">
+        <h1 class="text-xl font-bold text-zinc-900 dark:text-zinc-300">
           <b>Installation Instructions (Automatic)</b>
         </h1>
         <br />
 
         <div
           id="toast-default"
-          class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800/20 backdrop-blur-lg"
+          class="flex w-full max-w-xs items-center rounded-lg bg-zinc-100/20 p-4 text-zinc-900 shadow backdrop-blur-lg dark:bg-gray-800/20 dark:text-gray-400"
           role="alert"
         >
           <div
-            class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8"
+            class="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center"
           >
             <svg
               viewBox="0 0 1024 1024"
@@ -53,7 +59,7 @@ import '../components/scrollbar.css'
             </svg>
             <span class="sr-only">Fire icon</span>
           </div>
-          <div class="ml-3 text-sm font-normal">
+          <div class="text-md ml-3 font-normal">
             The server will automatically download the mods when you first join.
             <br />
             However, this means that you will need to create a vanilla character
@@ -63,13 +69,13 @@ import '../components/scrollbar.css'
         </div>
 
         <br />
-        <h1 class="text-xl text-zinc-300 font-bold">
+        <h1 class="text-xl font-bold dark:text-zinc-300">
           <b>Installation Instructions (Manual)</b>
         </h1>
-        <p class="text-md text-zinc-300 font-bold ml-8 mr-8">
+        <p class="text-md ml-8 mr-8 font-bold dark:text-zinc-300">
           1. Download the modpack from <a
             href="https://d2wlz8o3xah0nk.cloudfront.net/WolfpackVentures.zip"
-            class="text-zinc-400">here</a
+            class="dark:text-zinc-400"><u>here</u></a
           >
           <br />
           2. Extract the zip file
